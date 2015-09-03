@@ -14,6 +14,7 @@
 		BA145F801B986CAA00084C35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA145F7F1B986CAA00084C35 /* Images.xcassets */; };
 		BA145F831B986CAA00084C35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA145F811B986CAA00084C35 /* LaunchScreen.xib */; };
 		BA145F8F1B986CAA00084C35 /* CoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA145F8E1B986CAA00084C35 /* CoreDataTests.m */; };
+		BA145F9A1B986ED500084C35 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA145F991B986ED500084C35 /* CoreDataHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		BA145F881B986CAA00084C35 /* CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA145F8D1B986CAA00084C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA145F8E1B986CAA00084C35 /* CoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTests.m; sourceTree = "<group>"; };
+		BA145F981B986ED500084C35 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		BA145F991B986ED500084C35 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				BA145F771B986CAA00084C35 /* AppDelegate.m */,
 				BA145F791B986CAA00084C35 /* ViewController.h */,
 				BA145F7A1B986CAA00084C35 /* ViewController.m */,
+				BA145F981B986ED500084C35 /* CoreDataHelper.h */,
+				BA145F991B986ED500084C35 /* CoreDataHelper.m */,
 				BA145F7C1B986CAA00084C35 /* Main.storyboard */,
 				BA145F7F1B986CAA00084C35 /* Images.xcassets */,
 				BA145F811B986CAA00084C35 /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				BA145F7B1B986CAA00084C35 /* ViewController.m in Sources */,
 				BA145F781B986CAA00084C35 /* AppDelegate.m in Sources */,
+				BA145F9A1B986ED500084C35 /* CoreDataHelper.m in Sources */,
 				BA145F751B986CAA00084C35 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
