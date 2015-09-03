@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E31E9FF0-534E-496F-9E84-FE5465823DAA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF5CC3CC192C5A5E1657DE546A41A5D07FD5F30A</key>
+		<string>https://github.com/rhythmcity/CoreData.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CoreData.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF5CC3CC192C5A5E1657DE546A41A5D07FD5F30A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rhythmcity/CoreData.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF5CC3CC192C5A5E1657DE546A41A5D07FD5F30A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF5CC3CC192C5A5E1657DE546A41A5D07FD5F30A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CoreData</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -15,6 +15,8 @@
 		BA145F831B986CAA00084C35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA145F811B986CAA00084C35 /* LaunchScreen.xib */; };
 		BA145F8F1B986CAA00084C35 /* CoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA145F8E1B986CAA00084C35 /* CoreDataTests.m */; };
 		BA145F9A1B986ED500084C35 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA145F991B986ED500084C35 /* CoreDataHelper.m */; };
+		BA145F9E1B98845800084C35 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA145F9C1B98845800084C35 /* Model.xcdatamodeld */; };
+		BA145FA11B98915300084C35 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = BA145FA01B98915300084C35 /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		BA145F8E1B986CAA00084C35 /* CoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTests.m; sourceTree = "<group>"; };
 		BA145F981B986ED500084C35 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		BA145F991B986ED500084C35 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		BA145F9D1B98845800084C35 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BA145F9F1B98915300084C35 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		BA145FA01B98915300084C35 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,9 @@
 				BA145F7A1B986CAA00084C35 /* ViewController.m */,
 				BA145F981B986ED500084C35 /* CoreDataHelper.h */,
 				BA145F991B986ED500084C35 /* CoreDataHelper.m */,
+				BA145F9F1B98915300084C35 /* Item.h */,
+				BA145FA01B98915300084C35 /* Item.m */,
+				BA145F9B1B98843900084C35 /* DateModel */,
 				BA145F7C1B986CAA00084C35 /* Main.storyboard */,
 				BA145F7F1B986CAA00084C35 /* Images.xcassets */,
 				BA145F811B986CAA00084C35 /* LaunchScreen.xib */,
@@ -122,6 +130,14 @@
 				BA145F8D1B986CAA00084C35 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA145F9B1B98843900084C35 /* DateModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA145F9C1B98845800084C35 /* Model.xcdatamodeld */,
+			);
+			name = DateModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA145FA11B98915300084C35 /* Item.m in Sources */,
 				BA145F7B1B986CAA00084C35 /* ViewController.m in Sources */,
 				BA145F781B986CAA00084C35 /* AppDelegate.m in Sources */,
+				BA145F9E1B98845800084C35 /* Model.xcdatamodeld in Sources */,
 				BA145F9A1B986ED500084C35 /* CoreDataHelper.m in Sources */,
 				BA145F751B986CAA00084C35 /* main.m in Sources */,
 			);
@@ -434,6 +452,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA145F9C1B98845800084C35 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA145F9D1B98845800084C35 /* Model.xcdatamodel */,
+			);
+			currentVersion = BA145F9D1B98845800084C35 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BA145F671B986CAA00084C35 /* Project object */;
 }

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Item.h"
 @interface AppDelegate ()
 
 @end
@@ -37,6 +37,19 @@
     return _coreDataHelper;
 }
 
+-(void)demo{
+    if (DEBUG == 1) {
+        NSLog(@"Running %@ '%@'",self.class,NSStringFromSelector(_cmd) );
+    }
+    
+    NSArray *newItemNames = [NSArray arrayWithObjects:@"Apples",@"Milk",@"Bread",@"Cheese",@"Sausages",@"Butter",@"Orange juice",@"Cereal",@"Coffee",@"Eggs",@"Tommatoes",@"Fish", nil];
+    for (NSString *newItemName in newItemNames) {
+        Item *item = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:[self cdh].context];
+        item.name = newItemName;
+        NSLog(@"Inserted New Managed Object for '%@'",item.name);
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -53,7 +66,12 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if (DEBUG == 1) {
+        NSLog(@"Running %@ '%@'",self.class,NSStringFromSelector(_cmd) );
+    }
+
+    [self cdh];
+    [self demo];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
