@@ -18,6 +18,8 @@
 		BA145F9E1B98845800084C35 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA145F9C1B98845800084C35 /* Model.xcdatamodeld */; };
 		BA145FA11B98915300084C35 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = BA145FA01B98915300084C35 /* Item.m */; };
 		BA145FA81B99C6D300084C35 /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = BA145FA71B99C6D300084C35 /* Measurement.m */; };
+		BA145FAC1B99CBB000084C35 /* Amount.m in Sources */ = {isa = PBXBuildFile; fileRef = BA145FAB1B99CBB000084C35 /* Amount.m */; };
+		BA145FAE1B99CC5E00084C35 /* Model2toModel3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = BA145FAD1B99CC5E00084C35 /* Model2toModel3.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		BA145FA21B99C36C00084C35 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		BA145FA61B99C6D300084C35 /* Measurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measurement.h; sourceTree = "<group>"; };
 		BA145FA71B99C6D300084C35 /* Measurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measurement.m; sourceTree = "<group>"; };
+		BA145FA91B99CB6100084C35 /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
+		BA145FAA1B99CBB000084C35 /* Amount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Amount.h; sourceTree = "<group>"; };
+		BA145FAB1B99CBB000084C35 /* Amount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Amount.m; sourceTree = "<group>"; };
+		BA145FAD1B99CC5E00084C35 /* Model2toModel3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model2toModel3.xcmappingmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 				BA145FA01B98915300084C35 /* Item.m */,
 				BA145FA61B99C6D300084C35 /* Measurement.h */,
 				BA145FA71B99C6D300084C35 /* Measurement.m */,
+				BA145FAA1B99CBB000084C35 /* Amount.h */,
+				BA145FAB1B99CBB000084C35 /* Amount.m */,
 				BA145F9B1B98843900084C35 /* DateModel */,
 				BA145F7C1B986CAA00084C35 /* Main.storyboard */,
 				BA145F7F1B986CAA00084C35 /* Images.xcassets */,
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				BA145F9C1B98845800084C35 /* Model.xcdatamodeld */,
+				BA145FAD1B99CC5E00084C35 /* Model2toModel3.xcmappingmodel */,
 			);
 			name = DateModel;
 			sourceTree = "<group>";
@@ -251,8 +260,10 @@
 				BA145F781B986CAA00084C35 /* AppDelegate.m in Sources */,
 				BA145F9E1B98845800084C35 /* Model.xcdatamodeld in Sources */,
 				BA145F9A1B986ED500084C35 /* CoreDataHelper.m in Sources */,
+				BA145FAE1B99CC5E00084C35 /* Model2toModel3.xcmappingmodel in Sources */,
 				BA145FA81B99C6D300084C35 /* Measurement.m in Sources */,
 				BA145F751B986CAA00084C35 /* main.m in Sources */,
+				BA145FAC1B99CBB000084C35 /* Amount.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,10 +475,11 @@
 		BA145F9C1B98845800084C35 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				BA145FA91B99CB6100084C35 /* Model 3.xcdatamodel */,
 				BA145FA21B99C36C00084C35 /* Model 2.xcdatamodel */,
 				BA145F9D1B98845800084C35 /* Model.xcdatamodel */,
 			);
-			currentVersion = BA145FA21B99C36C00084C35 /* Model 2.xcdatamodel */;
+			currentVersion = BA145FA91B99CB6100084C35 /* Model 3.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

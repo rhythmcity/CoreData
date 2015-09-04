@@ -96,7 +96,7 @@ NSString *storeFilename = @"CoreDataTest.sqlite";
     
     NSDictionary *options = @{
                               NSMigratePersistentStoresAutomaticallyOption :@YES
-                              ,NSInferMappingModelAutomaticallyOption    :@YES
+                              ,NSInferMappingModelAutomaticallyOption    :@NO
                               ,NSSQLitePragmasOption:@{@"journal_model":@"DELETE"}
                               };
     NSError *error = nil;
