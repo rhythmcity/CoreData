@@ -73,6 +73,20 @@ NSString *storeFilename = @"CoreDataTest.sqlite";
     return self;
 }
 
++(CoreDataHelper *)defaultCoreDataHelper{
+    
+    static CoreDataHelper *_helper = nil;
+    static dispatch_once_t  once;
+    
+    dispatch_once(&once, ^{
+        _helper = [[CoreDataHelper alloc] init];
+    });
+    
+    return _helper;
+
+
+}
+
 -(void)loadStore{
     if (DEBUG == 1) {
         NSLog(@"Running %@ '%@'",self.class,NSStringFromSelector(_cmd) );

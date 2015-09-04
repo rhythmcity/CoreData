@@ -30,7 +30,7 @@
     }
     
     if (!_coreDataHelper) {
-        _coreDataHelper = [[CoreDataHelper alloc] init];
+        _coreDataHelper = [CoreDataHelper defaultCoreDataHelper];
         
         [_coreDataHelper setupCoreData];
     }
@@ -42,12 +42,28 @@
         NSLog(@"Running %@ '%@'",self.class,NSStringFromSelector(_cmd) );
     }
     
-    NSArray *newItemNames = [NSArray arrayWithObjects:@"Apples",@"Milk",@"Bread",@"Cheese",@"Sausages",@"Butter",@"Orange juice",@"Cereal",@"Coffee",@"Eggs",@"Tommatoes",@"Fish", nil];
-    for (NSString *newItemName in newItemNames) {
-        Item *item = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:[self cdh].context];
-        item.name = newItemName;
-        NSLog(@"Inserted New Managed Object for '%@'",item.name);
+//    NSArray *newItemNames = [NSArray arrayWithObjects:@"Apples",@"Milk",@"Bread",@"Cheese",@"Sausages",@"Butter",@"Orange juice",@"Cereal",@"Coffee",@"Eggs",@"Tommatoes",@"Fish", nil];
+//    for (NSString *newItemName in newItemNames) {
+//        Item *item = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:[self cdh].context];
+//        item.name = newItemName;
+//        NSLog(@"Inserted New Managed Object for '%@'",item.name);
+//    }
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName: @"Item"];
+    
+    NSSortDescriptor *sort  = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    NSPredicate *filter     = [NSPredicate predicateWithFormat:@"name != %@",@"Coffee"];
+    [request setPredicate:filter];
+    NSArray *fetchObjects   = [[CoreDataHelper defaultCoreDataHelper].context executeFetchRequest:request error:nil];
+    
+    for (Item * item in fetchObjects) {
+        NSLog(@"%@",item.name);
     }
+    
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

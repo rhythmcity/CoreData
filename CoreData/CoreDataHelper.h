@@ -21,4 +21,10 @@
  *  保存上下文
  */
 -(void)saveContext;
+/**
+ *  单例
+ *
+ *  @return coredata实例
+ */
++(CoreDataHelper *)defaultCoreDataHelper;
 @end
