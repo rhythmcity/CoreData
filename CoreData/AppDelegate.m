@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Item.h"
+#import "Measurement.h"
 @interface AppDelegate ()
 
 @end
@@ -49,20 +50,27 @@
 //        NSLog(@"Inserted New Managed Object for '%@'",item.name);
 //    }
     
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName: @"Item"];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
     
     NSSortDescriptor *sort  = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     [request setSortDescriptors:[NSArray arrayWithObject:sort]];
     
-    NSPredicate *filter     = [NSPredicate predicateWithFormat:@"name != %@",@"Coffee"];
-    [request setPredicate:filter];
+//    NSPredicate *filter     = [NSPredicate predicateWithFormat:@"name != %@",@"Coffee"];
+//    [request setPredicate:filter];
     NSArray *fetchObjects   = [[CoreDataHelper defaultCoreDataHelper].context executeFetchRequest:request error:nil];
     
     for (Item * item in fetchObjects) {
+//        [[CoreDataHelper defaultCoreDataHelper].context deleteObject:item];
         NSLog(@"%@",item.name);
     }
     
     
+    for (int i = 1; i<5000; i++) {
+        Measurement *newMeasurement = [NSEntityDescription insertNewObjectForEntityForName:@"Measurement" inManagedObjectContext:[CoreDataHelper defaultCoreDataHelper].context];
+        newMeasurement.abc = [NSString stringWithFormat:@"-----------Lost of test data x%i",i];
+        NSLog(@"insert %@",newMeasurement.abc);
+    }
+    [[CoreDataHelper defaultCoreDataHelper] saveContext];
     
 }
 

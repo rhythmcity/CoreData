@@ -93,11 +93,17 @@ NSString *storeFilename = @"CoreDataTest.sqlite";
     }
     
     if (_store) {return;}
+    
+    NSDictionary *options = @{
+                              NSMigratePersistentStoresAutomaticallyOption :@YES
+                              ,NSInferMappingModelAutomaticallyOption    :@YES
+                              ,NSSQLitePragmasOption:@{@"journal_model":@"DELETE"}
+                              };
     NSError *error = nil;
     _store = [_coordinator addPersistentStoreWithType:NSSQLiteStoreType
                                         configuration:nil
                                                   URL:[self storeURL]
-                                              options:nil
+                                              options:options
                                                 error:&error];
     if (!_store) {
         NSLog(@"FAILED to add store . Error %@",error);
